@@ -1,0 +1,5 @@
+import RSA
+
+Alice=RSA()
+
+Alice.miller_rabin(221)

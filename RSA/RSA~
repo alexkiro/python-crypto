@@ -1,0 +1,16 @@
+class RSA:
+    def __init__(self):
+        pass
+    def generate_keys(self):
+        pass
+    def miller_rabin(self,n):
+        s=0
+        d=n-1
+        while 1:
+            if d%2==0:
+                s+=1
+                d=d/2
+            else:
+                break
+        
+    

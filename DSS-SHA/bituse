@@ -1,0 +1,32 @@
+class bituse:
+    def __init__ (self,x,b=0):
+        try:
+            if type(x) in (int,long):
+                self._rep=self._add_pad(bin(x),b)
+            if type(x) is str:
+                self._rep=self.s2b(x)                
+        except NameError:
+            print 'An exception flew by!'
+            
+        raise NameError('HiThere')
+    def _add_pad (self,s,n):
+        if len(s)<=n:            
+            for i in range(0,b-len(s)):
+                s="0"+s
+            return s          
+        else:
+            raise NameError('Number too large to represent on '+n+' bits')
+        
+    def _c2b (self,c):
+        ret=bin(ord(c))
+        for i in range(len(ret),8):
+            ret="0"+ret
+        return ret
+
+    def _s2b (self,s):
+        ret=""
+        for i in range(0,len(s)):
+            ret=ret+self._c2b(s[i])
+        return ret
+            
+        
